@@ -1,6 +1,6 @@
 # Time Series Anomaly Detection su dati elettrici reali
 
-Progetto Python completo per anomaly detection su time series elettriche reali. Il repository unisce quattro approcci complementari:
+Anomaly detection su time series elettriche reali. Il repository unisce quattro approcci complementari:
 
 1. **Feature-based anomaly detection**: sliding windows, statistiche tempo/frequenza/dinamica, scaling, Isolation Forest.
 2. **Matrix Profile**: ricerca di subsequence discordanti e stima dell'inizio grezzo dell'anomalia.
@@ -117,7 +117,7 @@ report.html                             report HTML automatico con metriche, eve
 
 L'ensemble usa una logica a voti: feature detector, Matrix Profile, ARIMA e Prophet producono flag separati; un campione è anomalico se almeno `--min-votes` detector concordano. Gli eventi finali vengono anche classificati automaticamente in categorie interpretabili come `HIGH_LOAD_FORECAST_RESIDUAL`, `LOW_LOAD_SHAPE_PROFILE_SHIFT`, `SHAPE_BASED_DISCORD`, `FORECAST_RESIDUAL` e `FEATURE_WINDOW_OUTLIER`.
 
-## 4. Quando usare ciascun metodo
+
 
 | Metodo | Input | Cosa trova meglio | Note |
 |---|---|---|---|
