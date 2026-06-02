@@ -15,6 +15,15 @@ I dati reali inclusi sono quelli del progetto originale:
 
 Le notebook originali sono conservate in `notebooks/`; il codice legacy utile è in `legacy/`. Il file di fetch da MongoDB è stato trasformato in un template senza credenziali hardcoded.
 
+## Results Report
+
+The report analyzes the real-world energy time series processed by the pipeline and discusses:
+
+Open the report locally:
+
+```bash
+open report_analisi_critica_timeseries.html
+
 ## Installazione
 
 ```bash
