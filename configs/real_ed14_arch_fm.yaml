@@ -1,0 +1,22 @@
+# Esempio configurazione concettuale per una run reale.
+# La CLI accetta gli stessi valori come argomenti.
+data:
+  csv: data/raw/ED14_20240426.csv
+  meter_id: ARCH_FM
+  value_col: TotW
+  resample: 15min
+  agg: mean
+feature_detector:
+  window_size: 96
+  overlap: 0.5
+  contamination: 0.03
+matrix_profile:
+  subseq_len: 96
+  top_k: 30
+forecast:
+  train_ratio: 0.7
+  threshold_z: 3.5
+  arima_order: [2, 1, 2]
+  seasonal_order: [0, 0, 0, 0]
+ensemble:
+  min_votes: 2

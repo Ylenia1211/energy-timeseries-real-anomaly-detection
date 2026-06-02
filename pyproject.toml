@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsad-feature"
+version = "0.1.0"
+description = "Unified anomaly detection for real electrical time series: features, Matrix Profile, ARIMA and Prophet."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ylenia Galluzzo"}]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.3"]
+matrix = ["stumpy>=1.12"]
+forecast = ["statsmodels>=0.14", "prophet>=1.1", "plotly>=5.18"]
+fetch = ["pymongo>=4.6"]
+all = ["pytest>=7.4", "ruff>=0.3", "stumpy>=1.12", "statsmodels>=0.14", "prophet>=1.1", "plotly>=5.18", "pymongo>=4.6"]
+
+[project.scripts]
+tsad-feature = "tsad_feature.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]

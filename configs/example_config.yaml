@@ -1,0 +1,19 @@
+sampling_rate: 1000.0
+window_size: 1024
+overlap: 0.5
+fundamental_freq: 50.0
+bands:
+  - [0, 10]
+  - [10, 50]
+  - [50, 100]
+  - [100, 250]
+  - [250, 500]
+isolation_forest:
+  n_estimators: 300
+  max_samples: auto
+  contamination: 0.08
+  scaler: robust
+matrix_profile:
+  subseq_len: 1024
+  top_k: 20
+  zscore_threshold: 2.5

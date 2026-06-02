@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+models/*.joblib
+data/raw/*.csv
+data/processed/*.csv
+.DS_Store

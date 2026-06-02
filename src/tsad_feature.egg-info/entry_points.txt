@@ -1,0 +1,2 @@
+[console_scripts]
+tsad-feature = tsad_feature.cli:main
