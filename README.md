@@ -23,7 +23,7 @@ Open the report locally:
 
 ```bash
 open report_analisi_critica_timeseries.html
-
+```
 ## Installazione
 
 ```bash
